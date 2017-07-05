@@ -2,6 +2,7 @@
 
 ## Usage
 
-Use the shortcut 'ctrl+alt+c' in linux/windows 
-User 'ctrl+super+c' in OSX
+* Use the shortcut <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>c</kbd> in linux/windows 
+
+* User <kbd>ctrl</kbd> + <kbd>super</kbd> + <kbd>c</kbd> in macOS
 
