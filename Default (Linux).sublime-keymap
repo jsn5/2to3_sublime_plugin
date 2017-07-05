@@ -1,0 +1,6 @@
+[
+    {
+        "keys": ["ctrl+alt+c"],
+        "command": "convert_python"
+    }
+]
