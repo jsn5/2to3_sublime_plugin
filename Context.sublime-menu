@@ -1,3 +1,4 @@
 [
-    { "command": "convert_python" }
+    { "command": "convert_python",
+      "caption": "Python 2 to 3" }
 ]
