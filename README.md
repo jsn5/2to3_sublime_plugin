@@ -3,5 +3,5 @@
 ## Usage
 
 ### Right click and select 'Python 2 to 3'
-![Usage](https://im.ezgif.com/tmp/ezgif-1-f03c9d9213.gif)
+![Usage](https://github.com/jsn5/2to3_sublime_plugin/blob/master/usage.gif)
 
