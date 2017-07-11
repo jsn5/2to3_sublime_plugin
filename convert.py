@@ -1,11 +1,16 @@
-import sublime
-import sublime_plugin
-import os
+import sublime,sublime_plugin
+import subprocess
 class ConvertPythonCommand(sublime_plugin.TextCommand):
+	
 	def run(self, edit):
-		if self.view.file_name() == None:
-			sublime.error_message("Save the file first to perform the conversion.\n")
-		else:
-			self.view.run_command('save')
-			os.system("python 2to3.py -w "+self.view.file_name())
-			
+		lang = self.view.settings().get('syntax')
+		if not 'python' in lang.lower():
+			return()
+	
+		self.view.run_command('save')
+		path = self.view.file_name()
+		#execute 2to3
+		PIPE = subprocess.PIPE
+		p = subprocess.Popen(['2to3', '-w', path], stdout=PIPE, stderr=PIPE)
+		p.wait()
+		out, err = p.communicate()
