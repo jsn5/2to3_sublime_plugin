@@ -11,6 +11,6 @@ class ConvertPythonCommand(sublime_plugin.TextCommand):
 		path = self.view.file_name()
 		#execute 2to3
 		PIPE = subprocess.PIPE
-		p = subprocess.Popen(['2to3', '-w', path], stdout=PIPE, stderr=PIPE)
+		p = subprocess.Popen(['python', '2to3.py', '-w', path], stdout=PIPE, stderr=PIPE)
 		p.wait()
 		out, err = p.communicate()
